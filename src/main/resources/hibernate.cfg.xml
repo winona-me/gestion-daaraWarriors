@@ -13,7 +13,7 @@
 
         <!-- BANCO DE DADOS -->
         <property name="hibernate.connection.url">
-            jdbc:mysql://localhost:3306/daara?serverTimezone=Africa/Dakar&useSSL=false
+            jdbc:mysql://localhost:3306/daara?serverTimezone=Africa/Dakar&amp;useSSL=false
         </property>
 
         <!-- USER -->
@@ -30,12 +30,12 @@
             org.hibernate.dialect.MySQLDialect
         </property>
 
-        <!-- CRIA/ATUALIZA TABELAS -->
+        <!-- AUTO UPDATE -->
         <property name="hibernate.hbm2ddl.auto">
             update
         </property>
 
-        <!-- MOSTRAR SQL -->
+        <!-- SQL -->
         <property name="hibernate.show_sql">
             true
         </property>
@@ -44,11 +44,11 @@
             true
         </property>
 
-        <!-- MAPEAMENTO DAS ENTIDADES -->
-        <mapping class="sn.l2gl.ada.daara.model.models.Maitre"/>
-        <mapping class="sn.l2gl.ada.daara.model.models.Classe"/>
-        <mapping class="sn.l2gl.ada.daara.model.models.Talibe"/>
-        <mapping class="sn.l2gl.ada.daara.model.models.Progression"/>
+        <!-- MAPPINGS CORRIGIDOS -->
+        <mapping class="sn.l2gl.warriors.daara.model.models.Maitre"/>
+        <mapping class="sn.l2gl.warriors.daara.model.models.Classe"/>
+        <mapping class="sn.l2gl.warriors.daara.model.models.Talibe"/>
+        <mapping class="sn.l2gl.warriors.daara.model.models.Progression"/>
 
     </session-factory>
 </hibernate-configuration>
