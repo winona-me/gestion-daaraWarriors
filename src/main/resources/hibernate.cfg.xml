@@ -21,7 +21,7 @@
             root
         </property>
 
-        <!-- PASSWORD (deixa vazio se não tiver senha) -->
+        <!-- PASSWORD -->
         <property name="hibernate.connection.password">
         </property>
 
@@ -30,7 +30,7 @@
             org.hibernate.dialect.MySQLDialect
         </property>
 
-        <!-- CRIA/ATUALIZA TABELAS AUTOMATICAMENTE -->
+        <!-- CRIA/ATUALIZA TABELAS -->
         <property name="hibernate.hbm2ddl.auto">
             update
         </property>
@@ -43,6 +43,12 @@
         <property name="hibernate.format_sql">
             true
         </property>
+
+        <!-- MAPEAMENTO DAS ENTIDADES -->
+        <mapping class="sn.l2gl.ada.daara.model.models.Maitre"/>
+        <mapping class="sn.l2gl.ada.daara.model.models.Classe"/>
+        <mapping class="sn.l2gl.ada.daara.model.models.Talibe"/>
+        <mapping class="sn.l2gl.ada.daara.model.models.Progression"/>
 
     </session-factory>
 </hibernate-configuration>
