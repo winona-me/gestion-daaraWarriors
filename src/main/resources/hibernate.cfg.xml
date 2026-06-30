@@ -6,31 +6,43 @@
 <hibernate-configuration>
     <session-factory>
 
-        <!-- Pilote MySQL -->
+        <!-- DRIVER MySQL -->
         <property name="hibernate.connection.driver_class">
             com.mysql.cj.jdbc.Driver
         </property>
 
-        <!-- URL de connexion à la base daara -->
+        <!-- BANCO DE DADOS -->
         <property name="hibernate.connection.url">
-            jdbc:mysql://localhost:3306/daara?serverTimezone=Africa/Dakar&amp;useSSL=false
+            jdbc:mysql://localhost:3306/daara?serverTimezone=Africa/Dakar&useSSL=false
         </property>
 
-        <!-- Identifiants XAMPP par défaut -->
-        <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password"></property>
+        <!-- USER -->
+        <property name="hibernate.connection.username">
+            root
+        </property>
 
-        <!-- Dialecte MySQL -->
+        <!-- PASSWORD (deixa vazio se não tiver senha) -->
+        <property name="hibernate.connection.password">
+        </property>
+
+        <!-- DIALECT -->
         <property name="hibernate.dialect">
             org.hibernate.dialect.MySQLDialect
         </property>
 
-        <!-- Crée les tables automatiquement si elles n'existent pas -->
-        <property name="hibernate.hbm2ddl.auto">update</property>
+        <!-- CRIA/ATUALIZA TABELAS AUTOMATICAMENTE -->
+        <property name="hibernate.hbm2ddl.auto">
+            update
+        </property>
 
-        <!-- Affiche les requêtes SQL dans la console -->
-        <property name="hibernate.show_sql">true</property>
-        <property name="hibernate.format_sql">true</property>
+        <!-- MOSTRAR SQL -->
+        <property name="hibernate.show_sql">
+            true
+        </property>
+
+        <property name="hibernate.format_sql">
+            true
+        </property>
 
     </session-factory>
 </hibernate-configuration>
